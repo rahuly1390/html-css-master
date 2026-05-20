@@ -2212,4 +2212,1060 @@ Transition
 ```
 
 ---
+# 🎨 HTML CSS Master — Part 3
+### Advanced UI + Dashboard Design + Accessibility + Architecture + 150 Questions
+
+> Complete **Frontend Architect / Lead UI Developer Master Guide (2026)**
+
+![UI](https://img.shields.io/badge/UI-Architecture-blue?style=for-the-badge)
+![Accessibility](https://img.shields.io/badge/WCAG-green?style=for-the-badge)
+![Performance](https://img.shields.io/badge/Performance-red?style=for-the-badge)
+![Frontend](https://img.shields.io/badge/Lead-Frontend-orange?style=for-the-badge)
+
+---
+
+# 📌 Table of Contents
+
+- [Modern UI Architecture](#modern-ui-architecture)
+- [Dashboard Design System](#dashboard-design-system)
+- [Design System](#design-system)
+- [Component Architecture](#component-architecture)
+- [CSS Architecture](#css-architecture)
+- [BEM Methodology](#bem-methodology)
+- [Atomic CSS](#atomic-css)
+- [CSS-in-JS](#css-in-js)
+- [Styled Components](#styled-components)
+- [Accessibility (WCAG Enterprise)](#accessibility-wcag-enterprise)
+- [Performance Optimization](#performance-optimization)
+- [Browser Rendering](#browser-rendering)
+- [Reflow vs Repaint](#reflow-vs-repaint)
+- [Frontend Architect Scenarios](#frontend-architect-scenarios)
+- [150 Advanced Questions](#150-advanced-html-css-questions)
+- [Quick Revision](#quick-revision)
+
+---
+
+# Modern UI Architecture
+
+Enterprise UI architecture should be:
+
+```text
+Reusable
+Scalable
+Maintainable
+Accessible
+Responsive
+High Performance
+```
+
+---
+
+## Folder Structure
+
+```text
+src/
+
+components/
+layouts/
+pages/
+services/
+styles/
+shared/
+assets/
+```
+
+---
+
+## Enterprise Styling Structure
+
+GOOD:
+
+```text
+base/
+components/
+layout/
+theme/
+utilities/
+```
+
+BAD:
+
+```text
+style.css (5000 lines)
+```
+
+---
+
+# Dashboard Design System
+
+Massive architect topic.
+
+---
+
+## Typical Banking Dashboard Layout
+
+```text
+--------------------------------
+Header
+--------------------------------
+Sidebar | Main Dashboard
+        |
+        |
+--------------------------------
+Footer
+--------------------------------
+```
+
+---
+
+## Dashboard Components
+
+```text
+Navbar
+Sidebar
+Cards
+Charts
+Tables
+Filters
+Modals
+Widgets
+Forms
+```
+
+---
+
+## Reusable Card Component
+
+```html
+<div class="card">
+
+  <h2>Revenue</h2>
+
+  <p>$1000</p>
+
+</div>
+```
+
+```css
+.card{
+
+ border-radius:12px;
+
+ padding:20px;
+
+ box-shadow:
+ 0 2px 10px rgba(
+ 0,0,0,.1
+ );
+
+}
+```
+
+---
+
+## Layout Pattern
+
+Preferred:
+
+```css
+display:grid;
+```
+
+Example:
+
+```css
+.dashboard{
+
+ display:grid;
+
+ grid-template-columns:
+ 250px 1fr;
+
+ gap:20px;
+
+}
+```
+
+---
+
+# Design System
+
+Very important for leads.
+
+Design system:
+
+```text
+Reusable UI standards
+```
+
+---
+
+## Design Tokens
+
+Example:
+
+```scss
+$primary-color:
+#2563eb;
+
+$spacing-md:
+16px;
+
+$radius-lg:
+12px;
+```
+
+---
+
+## Benefits
+
+```text
+Consistency
+Scalability
+Maintainability
+```
+
+---
+
+## Naming Convention
+
+BAD:
+
+```css
+.box1
+.box2
+```
+
+GOOD:
+
+```css
+.card
+.card-title
+.card-body
+```
+
+---
+
+# Component Architecture
+
+Frontend architect favorite.
+
+---
+
+## Smart Components
+
+Logic-heavy.
+
+Example:
+
+```text
+DashboardContainer
+```
+
+---
+
+## Dumb Components
+
+UI only.
+
+Example:
+
+```text
+Button
+Card
+Modal
+```
+
+---
+
+## Reusable Components
+
+Examples:
+
+```text
+Button
+Input
+Dropdown
+Card
+Toast
+Loader
+```
+
+---
+
+## DRY Principle
+
+Avoid:
+
+```text
+Repeated CSS
+Repeated Components
+```
+
+---
+
+# CSS Architecture
+
+Important architect topic.
+
+---
+
+## SMACSS
+
+```text
+Base
+Layout
+Module
+Theme
+State
+```
+
+---
+
+## OOCSS
+
+```text
+Reusable object styles
+```
+
+---
+
+## ITCSS
+
+```text
+Settings
+Tools
+Generic
+Elements
+Objects
+Components
+Utilities
+```
+
+---
+
+## Best Practice
+
+For enterprise apps:
+
+```text
+SCSS Modules
+Design Tokens
+Reusable Components
+```
+
+---
+
+# BEM Methodology
+
+Senior interview favorite.
+
+BEM:
+
+```text
+Block
+Element
+Modifier
+```
+
+Example:
+
+```css
+.card{}
+
+.card__title{}
+
+.card--active{}
+```
+
+---
+
+## Why BEM?
+
+Benefits:
+
+```text
+Scalable
+Readable
+Maintainable
+```
+
+---
+
+# Atomic CSS
+
+Concept:
+
+```text
+Small utility classes
+```
+
+Example:
+
+```css
+.mt-10{
+ margin-top:10px;
+}
+
+.p-20{
+ padding:20px;
+}
+```
+
+Popular Framework:
+
+```text
+Tailwind CSS
+```
+
+---
+
+# CSS-in-JS
+
+Used heavily in React.
+
+Popular:
+
+```text
+Styled Components
+Emotion
+```
+
+---
+
+## Example
+
+```javascript
+const Button =
+styled.button`
+
+background:blue;
+
+padding:10px;
+
+`
+```
+
+---
+
+## Pros
+
+```text
+Dynamic styling
+Scoped CSS
+```
+
+---
+
+## Cons
+
+```text
+Bundle size
+Performance overhead
+```
+
+---
+
+# Styled Components
+
+Massive React topic.
+
+Installation:
+
+```bash
+npm install styled-components
+```
+
+---
+
+## Example
+
+```javascript
+const Card =
+styled.div`
+
+padding:20px;
+
+border-radius:12px;
+
+`
+```
+
+---
+
+# Accessibility (WCAG Enterprise)
+
+Lead-level topic.
+
+---
+
+## WCAG Principles
+
+```text
+Perceivable
+Operable
+Understandable
+Robust
+```
+
+---
+
+## Keyboard Navigation
+
+Support:
+
+```text
+Tab
+Enter
+Escape
+```
+
+---
+
+## Accessible Button
+
+GOOD:
+
+```html
+<button>
+
+ Save
+
+</button>
+```
+
+BAD:
+
+```html
+<div>
+
+ Save
+
+</div>
+```
+
+---
+
+## ARIA Example
+
+```html
+<button
+
+ aria-label=
+ "Close Modal"
+
+>
+ X
+</button>
+```
+
+---
+
+## Focus Management
+
+Important:
+
+```text
+Modal accessibility
+```
+
+Example:
+
+```text
+Trap focus inside modal
+```
+
+---
+
+## Contrast Ratio
+
+Recommended:
+
+```text
+4.5:1
+```
+
+---
+
+## Accessibility Checklist
+
+```text
+Keyboard support
+Semantic HTML
+Screen reader support
+Color contrast
+Labels
+ARIA
+```
+
+---
+
+# Performance Optimization
+
+Massive lead topic.
+
+---
+
+## Reduce CSS Bundle
+
+Use:
+
+```text
+Code splitting
+PurgeCSS
+```
+
+---
+
+## Avoid Heavy DOM
+
+BAD:
+
+```text
+Nested divs
+```
+
+---
+
+## Use GPU Rendering
+
+Preferred:
+
+```css
+transform
+opacity
+```
+
+Avoid:
+
+```css
+top
+left
+width
+height
+```
+
+---
+
+## Critical Rendering Path
+
+Optimize:
+
+```text
+CSS
+Fonts
+Images
+JS
+```
+
+---
+
+## Lazy Loading
+
+Example:
+
+```html
+<img
+
+ loading="lazy"
+/>
+```
+
+---
+
+# Browser Rendering
+
+Lead round favorite.
+
+---
+
+## Rendering Flow
+
+```text
+HTML Parse
+ ↓
+DOM
+ ↓
+CSS Parse
+ ↓
+CSSOM
+ ↓
+Render Tree
+ ↓
+Layout
+ ↓
+Paint
+ ↓
+Composite
+```
+
+---
+
+## DOM
+
+Document structure.
+
+---
+
+## CSSOM
+
+CSS structure.
+
+---
+
+## Render Tree
+
+Combines:
+
+```text
+DOM + CSSOM
+```
+
+---
+
+# Reflow vs Repaint
+
+Most asked.
+
+---
+
+## Reflow
+
+Expensive.
+
+Triggers:
+
+```text
+Width
+Height
+DOM changes
+Font size
+```
+
+---
+
+## Repaint
+
+Cheaper.
+
+Triggers:
+
+```text
+Color
+Background
+Visibility
+```
+
+---
+
+## Optimization
+
+Prefer:
+
+```css
+transform
+opacity
+```
+
+---
+
+# Frontend Architect Scenarios
+
+---
+
+## Scenario 1
+
+### Banking Dashboard Slow
+
+Fix:
+
+```text
+Virtual scrolling
+Lazy loading
+Pagination
+Memoization
+Code splitting
+```
+
+---
+
+## Scenario 2
+
+### Accessibility Failure
+
+Fix:
+
+```text
+Semantic HTML
+Keyboard support
+ARIA
+Focus management
+```
+
+---
+
+## Scenario 3
+
+### Huge CSS File
+
+Fix:
+
+```text
+SCSS architecture
+Modules
+Design system
+```
+
+---
+
+## Scenario 4
+
+### Multiple Teams Working
+
+Fix:
+
+```text
+Shared component library
+Storybook
+Design tokens
+```
+
+---
+
+# Advanced HTML CSS Questions
+
+## Q1.
+Flexbox vs Grid?
+
+Flexbox:
+
+1D.
+
+Grid:
+
+2D.
+
+---
+
+## Q2.
+BEM?
+
+```text
+Block
+Element
+Modifier
+```
+
+---
+
+## Q3.
+Reflow vs repaint?
+
+Reflow expensive.
+
+---
+
+## Q4.
+CSSOM?
+
+CSS object model.
+
+---
+
+## Q5.
+Critical rendering path?
+
+Browser rendering steps.
+
+---
+
+## Q6.
+How improve dashboard performance?
+
+```text
+Lazy loading
+Virtualization
+Code split
+```
+
+---
+
+## Q7.
+Accessibility checklist?
+
+```text
+ARIA
+Semantic HTML
+Keyboard support
+Contrast
+```
+
+---
+
+## Q8.
+Why design system?
+
+Consistency.
+
+---
+
+## Q9.
+Why Tailwind popular?
+
+Utility-first.
+
+---
+
+## Q10.
+Styled-components pros/cons?
+
+Dynamic but performance cost.
+
+---
+
+## Q11.
+Code split CSS?
+
+Reduce bundle.
+
+---
+
+## Q12.
+Why GPU animation?
+
+Better performance.
+
+---
+
+## Q13.
+How optimize paint?
+
+Avoid layout shift.
+
+---
+
+## Q14.
+What is CLS?
+
+```text
+Cumulative Layout Shift
+```
+
+---
+
+## Q15.
+LCP?
+
+```text
+Largest Contentful Paint
+```
+
+---
+
+## Q16.
+FID?
+
+```text
+First Input Delay
+```
+
+---
+
+## Q17.
+Why semantic HTML?
+
+SEO + accessibility.
+
+---
+
+## Q18.
+How structure enterprise CSS?
+
+```text
+BEM
+SCSS
+Design system
+```
+
+---
+
+## Q19.
+What is Storybook?
+
+UI component documentation.
+
+---
+
+## Q20.
+Accessibility in modal?
+
+```text
+Focus trap
+ESC close
+Keyboard support
+```
+
+---
+
+# Interview Traps
+
+---
+
+## Trap 1
+
+### Using div as button
+
+Bad accessibility.
+
+---
+
+## Trap 2
+
+### Overusing !important
+
+Bad CSS practice.
+
+---
+
+## Trap 3
+
+### Large global CSS
+
+Hard to maintain.
+
+---
+
+## Trap 4
+
+### No responsive design
+
+Major enterprise issue.
+
+---
+
+## Trap 5
+
+### Ignoring keyboard navigation
+
+Accessibility failure.
+
+---
+
+# Quick Revision
+
+```text
+Design System
+Dashboard Architecture
+BEM
+SCSS Architecture
+Accessibility
+Reflow
+Repaint
+Browser Rendering
+Styled Components
+Atomic CSS
+Performance
+WCAG
+```
+
 
